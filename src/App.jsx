@@ -1,6 +1,9 @@
 import { useState } from "react"
 import Home from "./pages/home/Home"
 import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Video from "./pages/video/Video";
+
 
 function App() {
 
@@ -16,7 +19,12 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <div>
-          <Home />
+          <Router>
+            <Routes>
+              <Route path="/" element={<Home />}/>
+              <Route path="/video" element={<Video />}/>
+            </Routes>
+          </Router>
       </div>
     </ThemeProvider>
   )

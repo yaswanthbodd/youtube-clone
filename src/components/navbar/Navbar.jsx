@@ -12,7 +12,7 @@ const Navbar = () => {
     
     return (
         <Box>
-            <AppBar elevation={0} color='transparent'>
+            <AppBar position='fixed' elevation={0}>
                 <Toolbar>
                     <Box sx={{flexGrow : 1}}>
                     <IconButton size='small' onClick={()=>setToggleClicked(!toggleClicked)}>

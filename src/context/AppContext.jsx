@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 export const AppContext = createContext();
 
 const ContextProvider = (props)=> {
-    const [toggleClicked, setToggleClicked] = useState(false);
+    const [toggleClicked, setToggleClicked] = useState(true);
     
     return(
         <AppContext.Provider value={{toggleClicked, setToggleClicked}}>
