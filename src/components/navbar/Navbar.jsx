@@ -6,6 +6,7 @@ import MicIcon from '@mui/icons-material/Mic';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import AddIcon from '@mui/icons-material/Add';
 import { AppContext } from '../../context/AppContext';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const {toggleClicked, setToggleClicked} = useContext(AppContext);
@@ -18,10 +19,12 @@ const Navbar = () => {
                     <IconButton size='small' onClick={()=>setToggleClicked(!toggleClicked)}>
                         <Menu />
                     </IconButton>
-                    <IconButton size='large' sx={{ '&:hover' : {bgcolor : 'transparent'}}} >
-                        <YouTubeIcon fontSize='large' className='text-red-700' />
-                        <Typography fontSize={20}>YouTube</Typography>
-                    </IconButton>
+                    <Link to="/">
+                        <IconButton size='large' sx={{ '&:hover' : {bgcolor : 'transparent'}}} >
+                            <YouTubeIcon fontSize='large' className='text-red-700' />
+                            <Typography fontSize={20}>YouTube-Clone</Typography>
+                        </IconButton>
+                    </Link>
                     </Box>
                     <Box sx={{flexGrow : 1}}>
                         <TextField sx={{ width : '500px' , '& .MuiOutlinedInput-root': {borderRadius : '25px',height : 40}}} name='search' placeholder='Search' InputProps={{

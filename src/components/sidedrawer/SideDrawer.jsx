@@ -42,7 +42,8 @@ import SingleLineDrawer from './SingleLineDrawer';
 const basicOptions = [
     {
         icon: IoMdHome,
-        primary: 'Home'
+        primary: 'Home',
+
     },
     {
         icon: SiYoutubeshorts,
@@ -114,47 +115,58 @@ const yourSubscriptions = [
 const yourExplore = [
     {
         icon : SiLinkfire,
-        primary : 'Trending'
+        primary : 'Trending',
+        linkCategory : 0
     },
     {
         icon : RiShoppingBag4Line,
-        primary : 'Shopping'
+        primary : 'Shorts',
+        linkCategory : 26
     },
     {
         icon : IoMusicalNotesOutline,
-        primary : 'Music'
+        primary : 'Music',
+        linkCategory : 10
     },
     {
         icon : PiFilmSlate,
-        primary : 'Films'
+        primary : 'Films',
+        linkCategory : 1
     },
     {
         icon : HiOutlineSignal,
-        primary : 'Live'
+        primary : 'Comedy',
+        linkCategory : 23
     },
     {
         icon : SiYoutubegaming,
-        primary : 'Gaming'
+        primary : 'Gaming',
+        linkCategory : 20
     },
     {
         icon : MdNewspaper,
-        primary : 'News'
+        primary : 'News',
+        linkCategory : 25
     },
     {
         icon : MdOutlineSportsCricket,
-        primary : 'Sports'
+        primary : 'Sports',
+        linkCategory : 17
     },
     {
         icon : SlGraduation,
-        primary : 'Courses'
+        primary : 'Science & Technology',
+        linkCategory : 28
     },
     {
         icon : GiTowel,
-        primary : 'Fashion & beauty'
+        primary : 'Pets & Animals',
+        linkCategory : 15
     },
     {
         icon : MdOutlinePodcasts,
-        primary : 'Podcasts'
+        primary : 'Entertainment',
+        linkCategory : 24
     },
 ]
 
@@ -215,6 +227,7 @@ const SideDrawer = () => {
                         overflow : 'hidden'
                     }
                 }
+                
             }} anchor='left' open={true} variant='permanent'>
                 <Box 
                 sx={{

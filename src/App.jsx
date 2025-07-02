@@ -22,7 +22,7 @@ function App() {
           <Router>
             <Routes>
               <Route path="/" element={<Home />}/>
-              <Route path="/video" element={<Video />}/>
+              <Route path="/video/:categoryId/:videoId" element={<Video />} />
             </Routes>
           </Router>
       </div>
