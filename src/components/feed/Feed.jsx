@@ -27,7 +27,7 @@ const Feed = () => {
             try{
                 const res = await fetch(url.toString());
                 const data = await res.json();
-                console.log(data.items)
+                //console.log(data.items)
                 setVideos(data.items || []);
             }catch(error){
                 console.error('Failed to fetch videos ',error);
@@ -50,8 +50,8 @@ const Feed = () => {
                 }}
             >
                 {videos.map((item, index) => (
-                    <Link to={`/video/${item.snippet.categoryId}/${item.id}`} onClick={()=>setVideoId(item.id)} style={{textDecoration : 'none'}}>
-                        <Card key={index} sx={{ width: toggleClicked ? 395 : 340 }} elevation={0}>
+                    <Link key={index} to={`/video/${item.snippet.categoryId}/${item.id}`} onClick={()=>setVideoId(item.id)} style={{textDecoration : 'none'}}>
+                        <Card  sx={{ width: toggleClicked ? 395 : 340 }} elevation={0}>
                             <CardMedia component="img" image={item.snippet.thumbnails.medium.url} alt={item.snippet.title} height="180"/>
                             <CardContent sx={{ bgcolor : '#111'}}>
                                 <Stack direction="row" spacing={1}>

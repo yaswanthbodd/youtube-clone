@@ -40,7 +40,7 @@ const Navbar = () => {
                         {/* <IconButton> */}
                             <NotificationsIcon fontSize='large' />
                         {/* </IconButton> */}
-                        <Avatar src='' sx={{width : 32, height : 32}}/>
+                        <Avatar sx={{width : 32, height : 32, bgcolor: "red", color: 'white'}}>YB</Avatar>
                     </Box>
                 </Toolbar>
             </AppBar>
